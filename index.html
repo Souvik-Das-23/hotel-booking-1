@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seaside Hotel — Classic Luxury & Oceanfront Sanctuary</title>
+  <meta name="description" content="Experience quintessential luxury at Seaside Hotel. Opulent rooms, Michelin-star dining, oceanfront infinity pools, and bespoke concierge experiences.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+  <!-- Main Navigation -->
+  <header class="main-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Seaside Hotel Homepage">
+        <div class="logo-crest">
+          <i data-lucide="crown"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">Seaside</span>
+          <span class="brand-sub">HOTEL & RESORT</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#rooms" class="nav-link">Our Rooms</a></li>
+          <li><a href="#experience" class="nav-link">The Experience</a></li>
+          <li><a href="#amenities" class="nav-link">Amenities</a></li>
+          <li><a href="#offers" class="nav-link">Offers</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="currency-btn" id="currencyToggle" title="Change Currency">
+          <span>USD ($)</span>
+        </button>
+        <button class="btn btn-gold btn-book-stay" id="openBookingModalBtn">
+          <span>BOOK A STAY</span>
+          <i data-lucide="arrow-right"></i>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Left Floating Social & Rotated Book Now Sidebar (Matches Reference Image) -->
+  <aside class="floating-left-sidebar" aria-label="Social Media and Direct Booking">
+    <div class="sidebar-socials">
+      <a href="#facebook" aria-label="Facebook" class="social-icon"><i data-lucide="facebook"></i></a>
+      <a href="#twitter" aria-label="Twitter" class="social-icon"><i data-lucide="twitter"></i></a>
+      <a href="#instagram" aria-label="Instagram" class="social-icon"><i data-lucide="instagram"></i></a>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-book-text" id="sidebarBookTrigger">
+      <span>Book Now</span>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO SECTION (Matches Reference Image with Luxury Interactive Upgrades) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-wrapper">
+        <img src="assets/images/hero-lounge.jpg" alt="Luxury lounge at Seaside Hotel" class="hero-bg-img" id="heroBgImg">
+        <div class="hero-overlay"></div>
+        <div class="hero-gradient-bottom"></div>
+      </div>
+
+      <div class="container hero-content-wrapper">
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <i data-lucide="sparkles"></i>
+            <span>5-STAR MEDITERRANEAN COASTAL RETREAT</span>
+          </div>
+          
+          <h1 class="hero-title animate-fade-in-up">
+            Enjoy Your<br>
+            <span class="gold-gradient-text">Dream Vacation</span>
+          </h1>
+
+          <p class="hero-description animate-fade-in-up delay-1">
+            The Seaside Hotel is the right choice for visitors who are searching for a combination of charm, peace and comfort.
+          </p>
+
+          <div class="hero-buttons animate-fade-in-up delay-2">
+            <a href="#rooms" class="btn btn-hero-gold">
+              <span>CHOOSE ROOM</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Booking Bar / Availability Engine -->
+      <div class="container booking-bar-container">
+        <div class="booking-bar" id="quickBookingBar">
+          <div class="booking-bar-col">
+            <label for="barCheckin"><i data-lucide="calendar"></i> Check-In</label>
+            <input type="date" id="barCheckin" class="bar-input" value="2026-10-10">
+          </div>
+
+          <div class="booking-bar-divider"></div>
+
+          <div class="booking-bar-col">
+            <label for="barCheckout"><i data-lucide="calendar-days"></i> Check-Out</label>
+            <input type="date" id="barCheckout" class="bar-input" value="2026-10-14">
+          </div>
+
+          <div class="booking-bar-divider"></div>
+
+          <div class="booking-bar-col">
+            <label for="barRoomType"><i data-lucide="bed-double"></i> Room Tier</label>
+            <select id="barRoomType" class="bar-select">
+              <option value="all">All Room Tiers</option>
+              <option value="standard">Standard Room ($189/nt)</option>
+              <option value="deluxe">Deluxe Room ($289/nt)</option>
+              <option value="premier">Premier Room ($449/nt)</option>
+              <option value="presidential">Presidential Suite ($850/nt)</option>
+              <option value="villa">Royal Beach Villa ($1,400/nt)</option>
+            </select>
+          </div>
+
+          <div class="booking-bar-divider"></div>
+
+          <div class="booking-bar-col">
+            <label for="barGuests"><i data-lucide="users"></i> Guests</label>
+            <select id="barGuests" class="bar-select">
+              <option value="1">1 Adult</option>
+              <option value="2" selected>2 Adults</option>
+              <option value="3">3 Adults (Suite)</option>
+              <option value="4">4 Adults (Family / Villa)</option>
+            </select>
+          </div>
+
+          <div class="booking-bar-action">
+            <button class="btn btn-gold btn-bar-search" id="barSearchBtn">
+              <i data-lucide="search"></i>
+              <span>SEARCH</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO BAR (Exact 3-column replica of Reference Image) -->
+    <section class="info-bar-section" aria-label="Quick Information">
+      <div class="container info-grid">
+        <div class="info-item" data-aos="fade-up">
+          <div class="info-icon-wrapper">
+            <i data-lucide="clock"></i>
+          </div>
+          <div class="info-content">
+            <h4 class="info-title">OPENING TIMES</h4>
+            <p class="info-detail">Monday – Friday, 09:00 - 18:00 (24/7 Concierge)</p>
+          </div>
+        </div>
+
+        <div class="info-item" data-aos="fade-up" data-delay="100">
+          <div class="info-icon-wrapper">
+            <i data-lucide="home"></i>
+          </div>
+          <div class="info-content">
+            <h4 class="info-title">OUR LOCATION</h4>
+            <p class="info-detail">108 S Main St, Los Angeles, CA 90291</p>
+          </div>
+        </div>
+
+        <div class="info-item" data-aos="fade-up" data-delay="200">
+          <div class="info-icon-wrapper">
+            <i data-lucide="headphones"></i>
+          </div>
+          <div class="info-content">
+            <h4 class="info-title">CUSTOMER SUPPORT</h4>
+            <p class="info-detail">+208 333 9296 / +1 (800) SEASIDE</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR ROOMS SECTION (Matches Reference with interactive cards & dynamic details) -->
+    <section class="rooms-section" id="rooms">
+      <div class="rooms-bg-overlay"></div>
+      <div class="container section-inner">
+        
+        <div class="section-header text-center">
+          <span class="sub-heading">SANCTUARIES OF REFINED COMFORT</span>
+          <h2 class="section-title">Our Rooms</h2>
+          <div class="title-gold-line"></div>
+          <p class="section-lead">Each room is curated with bespoke Italian furnishing, panoramic views, and tailored luxuries.</p>
+        </div>
+
+        <!-- Room Filter Tabs -->
+        <div class="room-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Rooms</button>
+          <button class="filter-btn" data-filter="standard">Standard</button>
+          <button class="filter-btn" data-filter="deluxe">Deluxe</button>
+          <button class="filter-btn" data-filter="premier">Premier</button>
+          <button class="filter-btn" data-filter="presidential">Presidential</button>
+          <button class="filter-btn" data-filter="villa">Villa</button>
+        </div>
+
+        <!-- Room Cards Grid -->
+        <div class="room-cards-grid" id="roomGrid">
+          
+          <!-- Card 1: Standard Room -->
+          <article class="room-card" data-category="standard" data-price="189" data-room-id="standard">
+            <div class="room-card-inner">
+              <div class="room-img-wrapper">
+                <span class="room-badge">ONLY 2 ROOMS LEFT</span>
+                <img src="assets/images/room-standard.jpg" alt="Standard Room at Seaside Hotel" class="room-img" loading="lazy">
+                <button class="quick-view-btn" data-room="standard" aria-label="Quick View Standard Room">
+                  <i data-lucide="eye"></i> Quick View
+                </button>
+              </div>
+
+              <div class="room-meta">
+                <span class="meta-item"><i data-lucide="users"></i> 2 Guests</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="maximize"></i> 320 Sq Ft</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="wifi"></i> Hi-Speed WiFi</span>
+              </div>
+
+              <div class="room-body">
+                <h3 class="room-name">STANDARD ROOM</h3>
+                <p class="room-desc">
+                  Most hotels and major hospitality companies have set industry standards to classify hotel types. An upscale full-service hotel facility offers luxury.
+                </p>
+
+                <div class="room-amenity-tags">
+                  <span>King Bed</span>
+                  <span>Rain Shower</span>
+                  <span>Espresso Bar</span>
+                </div>
+
+                <div class="room-footer">
+                  <div class="price-box">
+                    <span class="price-from">From</span>
+                    <span class="price-amount">$189</span>
+                    <span class="price-unit">/ night</span>
+                  </div>
+                  <button class="btn-book-room" data-room-id="standard" data-room-name="Standard Room" data-price="189">
+                    <span>BOOK NOW FOR $189</span>
+                    <i data-lucide="chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Deluxe Room -->
+          <article class="room-card" data-category="deluxe" data-price="289" data-room-id="deluxe">
+            <div class="room-card-inner">
+              <div class="room-img-wrapper">
+                <span class="room-badge">ONLY 1 ROOM LEFT</span>
+                <img src="assets/images/room-deluxe.jpg" alt="Deluxe Room at Seaside Hotel" class="room-img" loading="lazy">
+                <button class="quick-view-btn" data-room="deluxe" aria-label="Quick View Deluxe Room">
+                  <i data-lucide="eye"></i> Quick View
+                </button>
+              </div>
+
+              <div class="room-meta">
+                <span class="meta-item"><i data-lucide="users"></i> 2-3 Guests</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="maximize"></i> 480 Sq Ft</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="tv"></i> 4K OLED TV</span>
+              </div>
+
+              <div class="room-body">
+                <h3 class="room-name">DELUXE ROOM</h3>
+                <p class="room-desc">
+                  Spacious luxury suite with illuminated golden wood paneling, marble vanity bedside tables, plush velvet sofa lounge, and coastal city views.
+                </p>
+
+                <div class="room-amenity-tags">
+                  <span>Emperor Bed</span>
+                  <span>Soaking Tub</span>
+                  <span>Mini Bar</span>
+                </div>
+
+                <div class="room-footer">
+                  <div class="price-box">
+                    <span class="price-from">From</span>
+                    <span class="price-amount">$289</span>
+                    <span class="price-unit">/ night</span>
+                  </div>
+                  <button class="btn-book-room" data-room-id="deluxe" data-room-name="Deluxe Room" data-price="289">
+                    <span>BOOK NOW FOR $289</span>
+                    <i data-lucide="chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Premier Room -->
+          <article class="room-card" data-category="premier" data-price="449" data-room-id="premier">
+            <div class="room-card-inner">
+              <div class="room-img-wrapper">
+                <span class="room-badge featured-badge">ONLY 3 ROOMS LEFT</span>
+                <img src="assets/images/room-premier.jpg" alt="Premier Oceanfront Room at Seaside Hotel" class="room-img" loading="lazy">
+                <button class="quick-view-btn" data-room="premier" aria-label="Quick View Premier Room">
+                  <i data-lucide="eye"></i> Quick View
+                </button>
+              </div>
+
+              <div class="room-meta">
+                <span class="meta-item"><i data-lucide="users"></i> 2 Guests</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="maximize"></i> 650 Sq Ft</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="sun"></i> Ocean Balcony</span>
+              </div>
+
+              <div class="room-body">
+                <h3 class="room-name">PREMIER ROOM</h3>
+                <p class="room-desc">
+                  Direct panoramic ocean views with private oversized glass terrace, outdoor daybed lounge, champagne welcome bar, and deep marble bathroom.
+                </p>
+
+                <div class="room-amenity-tags">
+                  <span>Sea View Terrace</span>
+                  <span>Butler Service</span>
+                  <span>Champagne Bar</span>
+                </div>
+
+                <div class="room-footer">
+                  <div class="price-box">
+                    <span class="price-from">From</span>
+                    <span class="price-amount">$449</span>
+                    <span class="price-unit">/ night</span>
+                  </div>
+                  <button class="btn-book-room" data-room-id="premier" data-room-name="Premier Room" data-price="449">
+                    <span>BOOK NOW FOR $449</span>
+                    <i data-lucide="chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Presidential Suite -->
+          <article class="room-card" data-category="presidential" data-price="850" data-room-id="presidential">
+            <div class="room-card-inner">
+              <div class="room-img-wrapper">
+                <span class="room-badge luxury-badge">VIP PRESIDENTIAL</span>
+                <img src="assets/images/room-presidential.jpg" alt="Presidential Penthouse Suite" class="room-img" loading="lazy">
+                <button class="quick-view-btn" data-room="presidential" aria-label="Quick View Presidential Suite">
+                  <i data-lucide="eye"></i> Quick View
+                </button>
+              </div>
+
+              <div class="room-meta">
+                <span class="meta-item"><i data-lucide="users"></i> 2-4 Guests</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="maximize"></i> 1,200 Sq Ft</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="bath"></i> Jacuzzi Hot Tub</span>
+              </div>
+
+              <div class="room-body">
+                <h3 class="room-name">PRESIDENTIAL SUITE</h3>
+                <p class="room-desc">
+                  The crowning jewel of Seaside Hotel. Panoramic wraparound sunset view, indoor hydrotherapy hot tub, private dining salon, and personal butler.
+                </p>
+
+                <div class="room-amenity-tags">
+                  <span>Private Jacuzzi</span>
+                  <span>Private Dining</span>
+                  <span>VIP Chauffeur</span>
+                </div>
+
+                <div class="room-footer">
+                  <div class="price-box">
+                    <span class="price-from">From</span>
+                    <span class="price-amount">$850</span>
+                    <span class="price-unit">/ night</span>
+                  </div>
+                  <button class="btn-book-room" data-room-id="presidential" data-room-name="Presidential Suite" data-price="850">
+                    <span>BOOK NOW FOR $850</span>
+                    <i data-lucide="chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Royal Beach Villa -->
+          <article class="room-card" data-category="villa" data-price="1400" data-room-id="villa">
+            <div class="room-card-inner">
+              <div class="room-img-wrapper">
+                <span class="room-badge luxury-badge">ROYAL OASIS</span>
+                <img src="assets/images/room-villa.jpg" alt="Royal Beach Villa with Private Pool" class="room-img" loading="lazy">
+                <button class="quick-view-btn" data-room="villa" aria-label="Quick View Royal Villa">
+                  <i data-lucide="eye"></i> Quick View
+                </button>
+              </div>
+
+              <div class="room-meta">
+                <span class="meta-item"><i data-lucide="users"></i> 4-6 Guests</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="maximize"></i> 2,100 Sq Ft</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item"><i data-lucide="waves"></i> Private Plunge Pool</span>
+              </div>
+
+              <div class="room-body">
+                <h3 class="room-name">ROYAL BEACH VILLA</h3>
+                <p class="room-desc">
+                  Secluded private sanctuary with infinity plunge pool, direct beachfront access, outdoor teak sundeck, cabana loungers, and private chef services.
+                </p>
+
+                <div class="room-amenity-tags">
+                  <span>Private Pool</span>
+                  <span>Private Chef</span>
+                  <span>Direct Beach Access</span>
+                </div>
+
+                <div class="room-footer">
+                  <div class="price-box">
+                    <span class="price-from">From</span>
+                    <span class="price-amount">$1,400</span>
+                    <span class="price-unit">/ night</span>
+                  </div>
+                  <button class="btn-book-room" data-room-id="villa" data-room-name="Royal Beach Villa" data-price="1400">
+                    <span>BOOK NOW FOR $1,400</span>
+                    <i data-lucide="chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- THE LUXURY EXPERIENCE SECTION (Exact Replica of Reference Image with Ochre Brown Backdrop) -->
+    <section class="experience-section" id="experience">
+      <div class="container experience-grid">
+        
+        <!-- Left: Staggered Imagery matching reference -->
+        <div class="experience-images-col">
+          <div class="staggered-image-card img-card-left" data-aos="fade-right">
+            <img src="assets/images/exp-corner.jpg" alt="Minimalist travertine architecture and design" loading="lazy">
+            <div class="img-caption-tag">
+              <span>NATURAL TRAVERTINE & OAK</span>
+            </div>
+          </div>
+          <div class="staggered-image-card img-card-right" data-aos="fade-left" data-delay="150">
+            <img src="assets/images/exp-bathroom.jpg" alt="Italian marble bathroom with soaking tub" loading="lazy">
+            <div class="img-caption-tag">
+              <span>CALACATTA MARBLE SANCTUARY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text Content matching reference -->
+        <div class="experience-text-col" data-aos="fade-up">
+          <span class="experience-eyebrow">UNRIVALED HOSPITALITY</span>
+          <h2 class="experience-title">
+            The Luxury Experience<br>
+            You'll Remember
+          </h2>
+
+          <p class="experience-desc">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          </p>
+
+          <div class="experience-highlights">
+            <div class="highlight-item">
+              <i data-lucide="check-circle-2"></i>
+              <span>24/7 Dedicated Butler & Valet Service</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check-circle-2"></i>
+              <span>Michelin-Starred Epicurean Dining</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check-circle-2"></i>
+              <span>Private Yacht Charters & Helicopter Heliport</span>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check-circle-2"></i>
+              <span>Holistic Oceanfront Thermal Spa</span>
+            </div>
+          </div>
+
+          <div class="experience-action">
+            <button class="btn-exp-book" id="expBookBtn">
+              <span>BOOK NOW</span>
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESORT AMENITIES & EXPERIENCES TABS -->
+    <section class="amenities-section" id="amenities">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">CURATED LUXURIES</span>
+          <h2 class="section-title">World-Class Amenities</h2>
+          <div class="title-gold-line"></div>
+        </div>
+
+        <div class="amenities-tab-nav">
+          <button class="tab-btn active" data-tab="dining">
+            <i data-lucide="utensils"></i> Michelin Dining
+          </button>
+          <button class="tab-btn" data-tab="spa">
+            <i data-lucide="sparkles"></i> Thermal Spa
+          </button>
+          <button class="tab-btn" data-tab="pool">
+            <i data-lucide="waves"></i> Infinity Pools
+          </button>
+          <button class="tab-btn" data-tab="yacht">
+            <i data-lucide="anchor"></i> Yacht Charters
+          </button>
+        </div>
+
+        <div class="amenity-tab-content active" id="tab-dining">
+          <div class="amenity-showcase">
+            <div class="amenity-showcase-img">
+              <img src="assets/images/exp-dining.jpg" alt="Michelin fine dining restaurant overlooking sunset ocean" loading="lazy">
+              <span class="amenity-pill">3 MICHELIN STARS</span>
+            </div>
+            <div class="amenity-showcase-text">
+              <span class="amenity-sub">CULINARY EXCELLENCE</span>
+              <h3>Le Rivage Restaurant & Wine Vault</h3>
+              <p>Experience gastronomic poetry crafted by Executive Chef Jean-Luc Marcelle. Savor line-caught sea bass, black truffle pasta, and a 4,000-bottle wine cellar curated by master sommeliers.</p>
+              <ul class="amenity-bullet-list">
+                <li><i data-lucide="clock"></i> Breakfast: 07:00 - 11:00 | Dinner: 18:30 - 23:00</li>
+                <li><i data-lucide="wine"></i> Sommelier Private Wine Tasting Sessions</li>
+                <li><i data-lucide="chef-hat"></i> Private Chef Table Experience (Upon Reservation)</li>
+              </ul>
+              <button class="btn btn-gold btn-reserve-table" id="reserveTableBtn">
+                <span>RESERVE A TABLE</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="amenity-tab-content" id="tab-spa">
+          <div class="amenity-showcase">
+            <div class="amenity-showcase-img">
+              <img src="assets/images/exp-spa.jpg" alt="Thermal Spa and indoor heated pool overlooking ocean" loading="lazy">
+              <span class="amenity-pill">WELLNESS HEAVEN</span>
+            </div>
+            <div class="amenity-showcase-text">
+              <span class="amenity-sub">HOLISTIC REJUVENATION</span>
+              <h3>Thalasso Azure Thermal Spa</h3>
+              <p>Surrender your senses to mineral-rich seawater hydrotherapy, eucalyptus herbal steam grottos, and bespoke Swiss anti-aging treatments overlooking the Mediterranean horizon.</p>
+              <ul class="amenity-bullet-list">
+                <li><i data-lucide="sparkles"></i> 10 Private Treatment Suites with Ocean Views</li>
+                <li><i data-lucide="flame"></i> Finnish Sauna & Himalayan Salt Inhalation Room</li>
+                <li><i data-lucide="droplets"></i> Heated Infinity Thalassotherapy Pool (36°C)</li>
+              </ul>
+              <button class="btn btn-gold btn-reserve-table" id="bookSpaBtn">
+                <span>BOOK A SPA RITUAL</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="amenity-tab-content" id="tab-pool">
+          <div class="amenity-showcase">
+            <div class="amenity-showcase-img">
+              <img src="assets/images/room-villa.jpg" alt="Infinity Pool overlooking ocean" loading="lazy">
+              <span class="amenity-pill">HEATED HORIZON POOL</span>
+            </div>
+            <div class="amenity-showcase-text">
+              <span class="amenity-sub">SUN & SERENITY</span>
+              <h3>Horizon Edge Infinity Pools & Cabanas</h3>
+              <p>Suspended dramatically above the crashing waves, our twin heated infinity pools feature submerged velvet daybeds, dedicated butler cocktail service, and private VIP cabanas.</p>
+              <ul class="amenity-bullet-list">
+                <li><i data-lucide="sun"></i> Daily Fresh Fruit & Chilled Towel Service</li>
+                <li><i data-lucide="glass-water"></i> Sunken Pool Bar with Signature Mixology</li>
+                <li><i data-lucide="sunset"></i> Sunset Acoustic Jazz Sessions (5:30 PM)</li>
+              </ul>
+              <button class="btn btn-gold" id="reserveCabanaBtn">
+                <span>RESERVE VIP CABANA</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="amenity-tab-content" id="tab-yacht">
+          <div class="amenity-showcase">
+            <div class="amenity-showcase-img">
+              <img src="assets/images/room-premier.jpg" alt="Yacht excursions and coastal views" loading="lazy">
+              <span class="amenity-pill">PRIVATE CHARTERS</span>
+            </div>
+            <div class="amenity-showcase-text">
+              <span class="amenity-sub">MARITIME ADVENTURES</span>
+              <h3>Seaside Private Yacht Fleet</h3>
+              <p>Embark on private sunset cruises, secluded cove snorkeling expeditions, or champagne island transfers aboard our custom 68ft Riva Dolceriva yachts.</p>
+              <ul class="amenity-bullet-list">
+                <li><i data-lucide="compass"></i> Certified Captain & Private Stewardess on Board</li>
+                <li><i data-lucide="wine"></i> Dom Pérignon & Fresh Beluga Caviar Service</li>
+                <li><i data-lucide="anchor"></i> Custom Itineraries across Coastal Riviera</li>
+              </ul>
+              <button class="btn btn-gold" id="charterYachtBtn">
+                <span>INQUIRE YACHT CHARTER</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEASONAL SPECIAL OFFERS SECTION -->
+    <section class="offers-section" id="offers">
+      <div class="container">
+        <div class="offer-banner">
+          <div class="offer-badge"><i data-lucide="percent"></i> LIMITED SEASONAL PRIVILEGE</div>
+          <h2 class="offer-title">Riviera Springtime Sanctuary</h2>
+          <p class="offer-desc">Book 3 nights or more in any Deluxe or Premier Suite and receive complimentary airport chauffeur transfer, daily champagne breakfast, and a $150 Spa Credit.</p>
+          
+          <div class="offer-countdown" id="countdownTimer">
+            <div class="countdown-box">
+              <span class="cd-num" id="cdDays">06</span>
+              <span class="cd-label">DAYS</span>
+            </div>
+            <span class="cd-colon">:</span>
+            <div class="countdown-box">
+              <span class="cd-num" id="cdHours">18</span>
+              <span class="cd-label">HOURS</span>
+            </div>
+            <span class="cd-colon">:</span>
+            <div class="countdown-box">
+              <span class="cd-num" id="cdMinutes">42</span>
+              <span class="cd-label">MINUTES</span>
+            </div>
+            <span class="cd-colon">:</span>
+            <div class="countdown-box">
+              <span class="cd-num" id="cdSeconds">15</span>
+              <span class="cd-label">SECONDS</span>
+            </div>
+          </div>
+
+          <div class="offer-cta-row">
+            <button class="btn btn-hero-gold" id="claimOfferBtn">
+              <span>CLAIM OFFER WITH CODE: RIVIERA25</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION (Exact Mood & Layout Match to Reference Image) -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="testimonials-bg-overlay"></div>
+      <div class="container testimonials-container">
+        
+        <div class="section-header text-center">
+          <h2 class="section-title text-light">Testimonials</h2>
+          <div class="title-gold-line"></div>
+        </div>
+
+        <div class="testimonial-quote-icon">
+          <span>“</span>
+        </div>
+
+        <!-- Carousel Wrapper -->
+        <div class="testimonial-slider" id="testimonialSlider">
+          
+          <div class="testimonial-slide active" data-index="0">
+            <p class="testimonial-quote">
+              They were extremely accommodating and allowed us to check in early at like 10am. We got to hotel super early and I didn't wanna wait. So this was a big plus. The service was exceptional as well. Would definitely send a friend there.
+            </p>
+            <div class="testimonial-author-box">
+              <span class="author-name">Dorrita Menoutney</span>
+              <span class="author-role">Verified Luxury Guest • Standard Room</span>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" data-index="1">
+            <p class="testimonial-quote">
+              The Premier Oceanfront room was breathtaking. Waking up to the golden dawn over the Mediterranean from our private terrace was unforgettable. The 24/7 butler service made us feel like royalty.
+            </p>
+            <div class="testimonial-author-box">
+              <span class="author-name">Lord Arthur Montgomery</span>
+              <span class="author-role">VIP Club Member • Premier Room</span>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" data-index="2">
+            <p class="testimonial-quote">
+              The culinary experience at Le Rivage was beyond sublime. The black truffle pasta paired with vintage Bordeaux while listening to the ocean waves created pure magic. Cannot wait to return.
+            </p>
+            <div class="testimonial-author-box">
+              <span class="author-name">Genevieve DuPont</span>
+              <span class="author-role">Food & Travel Connoisseur • Deluxe Suite</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="testimonial-dots" id="testimonialDots">
+          <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT & CONCIERGE BAR -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <i data-lucide="map-pin"></i>
+          <h4>RESORT ADDRESS</h4>
+          <p>108 S Main St, Los Angeles, CA 90291<br>Riviera Oceanfront Enclave</p>
+        </div>
+        <div class="contact-card">
+          <i data-lucide="phone-call"></i>
+          <h4>DIRECT RESERVATIONS</h4>
+          <p>+1 (800) 888-LUXE<br>reservations@seasidehotel.com</p>
+        </div>
+        <div class="contact-card">
+          <i data-lucide="concierge-bell"></i>
+          <h4>CHIEF CONCIERGE</h4>
+          <p>Available 24/7 for bespoke requests<br>concierge@seasidehotel.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Exact Match to Reference Image with Rich Links) -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <i data-lucide="crown"></i>
+            <span>Seaside Hotel</span>
+          </div>
+          <p class="footer-tagline">Timeless elegance, supreme serenity, and unmatched oceanfront hospitality since 1928.</p>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>SUBSCRIBE TO PRIVATE PRIVILEGES</h4>
+          <p>Receive unlisted suite offers and exclusive invitations.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required class="newsletter-input" id="newsletterEmail">
+            <button type="submit" class="btn-newsletter">JOIN</button>
+          </form>
+          <div class="form-feedback" id="newsletterFeedback"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; Copyright 2026 - Seaside Hotel. All Rights Reserved. Inspired by Designesia.
+        </p>
+        <div class="footer-social-icons">
+          <a href="#facebook" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#twitter" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#rss" aria-label="RSS"><i data-lucide="rss"></i></a>
+          <a href="#google" aria-label="Google"><i data-lucide="globe"></i></a>
+          <a href="#instagram" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#pinterest" aria-label="Pinterest"><i data-lucide="share-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- INTERACTIVE MODALS & TRANSFORMING COMPONENTS -->
+  <!-- ============================================ -->
+
+  <!-- 1. MULTI-STEP BOOKING & CHECKOUT MODAL -->
+  <div class="modal-overlay" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog modal-booking-dialog">
+      <button class="modal-close-btn" id="closeBookingModalBtn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-crest"><i data-lucide="crown"></i></div>
+        <h3 class="modal-title">Reserve Your Luxury Stay</h3>
+        <p class="modal-subtitle">Direct booking guarantee with best rate & complimentary upgrades</p>
+        
+        <!-- Step Indicators -->
+        <div class="modal-steps">
+          <div class="step-item active" data-step="1">
+            <span class="step-num">1</span>
+            <span class="step-txt">Stay Details</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-item" data-step="2">
+            <span class="step-num">2</span>
+            <span class="step-txt">Luxury Add-ons</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-item" data-step="3">
+            <span class="step-num">3</span>
+            <span class="step-txt">Guest Details</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-item" data-step="4">
+            <span class="step-num">4</span>
+            <span class="step-txt">Confirmation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- STEP 1: Dates & Room -->
+        <div class="step-content active" id="bookingStep1">
+          <form id="step1Form">
+            <div class="form-row">
+              <div class="form-group">
+                <label><i data-lucide="calendar"></i> Check-in Date</label>
+                <input type="date" id="bookCheckIn" class="form-control" required value="2026-10-10">
+              </div>
+              <div class="form-group">
+                <label><i data-lucide="calendar"></i> Check-out Date</label>
+                <input type="date" id="bookCheckOut" class="form-control" required value="2026-10-14">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label><i data-lucide="bed-double"></i> Select Room Sanctuary</label>
+              <select id="bookRoomSelect" class="form-control">
+                <option value="standard" data-price="189">Standard Room — $189 / night</option>
+                <option value="deluxe" data-price="289" selected>Deluxe Room — $289 / night</option>
+                <option value="premier" data-price="449">Premier Oceanfront Room — $449 / night</option>
+                <option value="presidential" data-price="850">Presidential Penthouse Suite — $850 / night</option>
+                <option value="villa" data-price="1400">Royal Beach Villa with Pool — $1,400 / night</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label><i data-lucide="users"></i> Adults</label>
+                <select id="bookAdults" class="form-control">
+                  <option value="1">1 Adult</option>
+                  <option value="2" selected>2 Adults</option>
+                  <option value="3">3 Adults</option>
+                  <option value="4">4 Adults</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label><i data-lucide="smile"></i> Children</label>
+                <select id="bookChildren" class="form-control">
+                  <option value="0" selected>0 Children</option>
+                  <option value="1">1 Child</option>
+                  <option value="2">2 Children</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="price-preview-card">
+              <div class="price-row">
+                <span>Nights:</span>
+                <strong id="calcNights">4 Nights</strong>
+              </div>
+              <div class="price-row">
+                <span>Room Rate:</span>
+                <strong id="calcBaseRate">$289 / night</strong>
+              </div>
+              <div class="price-row total-highlight">
+                <span>Estimated Room Total:</span>
+                <span class="gold-price" id="calcRoomTotal">$1,156</span>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-gold btn-next-step" data-next="2">
+                <span>CONTINUE TO ADD-ONS</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- STEP 2: Luxury Add-ons -->
+        <div class="step-content" id="bookingStep2">
+          <p class="step-prompt">Elevate your stay with signature seaside privileges:</p>
+          <div class="addons-grid">
+            
+            <label class="addon-card">
+              <input type="checkbox" name="addons" value="champagne" data-price="95" class="addon-checkbox">
+              <div class="addon-body">
+                <div class="addon-header">
+                  <span class="addon-name"><i data-lucide="wine"></i> Chilled Dom Pérignon Champagne</span>
+                  <span class="addon-price">+$95</span>
+                </div>
+                <p class="addon-desc">Waiting in your suite on silver ice with crystal flutes & artisan truffles.</p>
+              </div>
+            </label>
+
+            <label class="addon-card">
+              <input type="checkbox" name="addons" value="transfer" data-price="120" class="addon-checkbox">
+              <div class="addon-body">
+                <div class="addon-header">
+                  <span class="addon-name"><i data-lucide="car"></i> VIP Airport Mercedes-Maybach Transfer</span>
+                  <span class="addon-price">+$120</span>
+                </div>
+                <p class="addon-desc">Chauffeured luxury pickup and drop-off with refreshments.</p>
+              </div>
+            </label>
+
+            <label class="addon-card">
+              <input type="checkbox" name="addons" value="spa" data-price="220" class="addon-checkbox">
+              <div class="addon-body">
+                <div class="addon-header">
+                  <span class="addon-name"><i data-lucide="sparkles"></i> Couples Oceanfront Spa Ritual</span>
+                  <span class="addon-price">+$220</span>
+                </div>
+                <p class="addon-desc">90-minute bespoke aromatherapy massage & thermal hydrotherapy.</p>
+              </div>
+            </label>
+
+            <label class="addon-card">
+              <input type="checkbox" name="addons" value="dinner" data-price="180" class="addon-checkbox">
+              <div class="addon-body">
+                <div class="addon-header">
+                  <span class="addon-name"><i data-lucide="utensils"></i> Candlelit Beachfront 5-Course Dinner</span>
+                  <span class="addon-price">+$180</span>
+                </div>
+                <p class="addon-desc">Private table set directly on the sand with personal sommelier.</p>
+              </div>
+            </label>
+
+          </div>
+
+          <div class="modal-footer nav-between">
+            <button type="button" class="btn btn-outline btn-prev-step" data-prev="1">
+              <i data-lucide="arrow-left"></i> <span>BACK</span>
+            </button>
+            <button type="button" class="btn btn-gold btn-next-step" data-next="3">
+              <span>GUEST DETAILS</span> <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Guest Details -->
+        <div class="step-content" id="bookingStep3">
+          <form id="step3Form">
+            <div class="form-row">
+              <div class="form-group">
+                <label><i data-lucide="user"></i> Full Name *</label>
+                <input type="text" id="guestName" class="form-control" placeholder="e.g. Lord Alexander Wright" required value="Alexander Wright">
+              </div>
+              <div class="form-group">
+                <label><i data-lucide="mail"></i> Email Address *</label>
+                <input type="email" id="guestEmail" class="form-control" placeholder="alexander@luxury.com" required value="alexander.wright@luxury.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label><i data-lucide="phone"></i> Phone Number *</label>
+                <input type="tel" id="guestPhone" class="form-control" placeholder="+1 (555) 019-2834" required value="+1 (555) 019-2834">
+              </div>
+              <div class="form-group">
+                <label><i data-lucide="tag"></i> Promo / VIP Code</label>
+                <div class="promo-input-wrap">
+                  <input type="text" id="guestPromo" class="form-control" placeholder="SEASIDE20">
+                  <button type="button" class="btn-apply-promo" id="btnApplyPromo">APPLY</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label><i data-lucide="message-square"></i> Special Requests & Dietary Preferences</label>
+              <textarea id="guestRequests" class="form-control" rows="2" placeholder="Late check-in, feather pillows, champagne preferences..."></textarea>
+            </div>
+
+            <!-- Total Price Summary Breakdown -->
+            <div class="bill-summary-card">
+              <div class="bill-row">
+                <span>Room Charges (<span id="billNightsCount">4</span> nights):</span>
+                <span id="billRoomAmount">$1,156.00</span>
+              </div>
+              <div class="bill-row">
+                <span>Luxury Add-ons:</span>
+                <span id="billAddonsAmount">$0.00</span>
+              </div>
+              <div class="bill-row">
+                <span>Taxes & Luxury Resort Surcharge (12%):</span>
+                <span id="billTaxesAmount">$138.72</span>
+              </div>
+              <div class="bill-row discount-row" id="billDiscountRow" style="display: none;">
+                <span>VIP Discount (20% Off):</span>
+                <span class="discount-num" id="billDiscountAmount">-$231.20</span>
+              </div>
+              <div class="bill-divider"></div>
+              <div class="bill-row grand-total">
+                <span>Total Amount Due:</span>
+                <span class="grand-price" id="billGrandTotal">$1,294.72</span>
+              </div>
+            </div>
+
+            <div class="modal-footer nav-between">
+              <button type="button" class="btn btn-outline btn-prev-step" data-prev="2">
+                <i data-lucide="arrow-left"></i> <span>BACK</span>
+              </button>
+              <button type="submit" class="btn btn-gold btn-confirm-booking">
+                <i data-lucide="check"></i> <span>CONFIRM & GUARANTEE RESERVATION</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- STEP 4: Instant Confirmation Pass -->
+        <div class="step-content" id="bookingStep4">
+          <div class="confirmation-success-card">
+            <div class="success-icon-ring">
+              <i data-lucide="check-circle-2"></i>
+            </div>
+            <h3>Reservation Confirmed!</h3>
+            <p class="success-note">A confirmation email with luxury arrival guide has been sent to <strong id="confirmEmailDisplay">alexander.wright@luxury.com</strong>.</p>
+
+            <div class="reservation-pass" id="printablePass">
+              <div class="pass-header">
+                <div class="pass-brand">
+                  <i data-lucide="crown"></i>
+                  <span>SEASIDE HOTEL</span>
+                </div>
+                <div class="pass-code">
+                  <span>CONFIRMATION ID</span>
+                  <strong id="confirmBookingId">#SSH-984210</strong>
+                </div>
+              </div>
+
+              <div class="pass-grid">
+                <div class="pass-item">
+                  <span class="pass-lbl">GUEST</span>
+                  <strong class="pass-val" id="confirmGuestName">Lord Alexander Wright</strong>
+                </div>
+                <div class="pass-item">
+                  <span class="pass-lbl">SUITE</span>
+                  <strong class="pass-val" id="confirmRoomName">Deluxe Room</strong>
+                </div>
+                <div class="pass-item">
+                  <span class="pass-lbl">CHECK-IN</span>
+                  <strong class="pass-val" id="confirmCheckIn">Oct 10, 2026 (14:00)</strong>
+                </div>
+                <div class="pass-item">
+                  <span class="pass-lbl">CHECK-OUT</span>
+                  <strong class="pass-val" id="confirmCheckOut">Oct 14, 2026 (12:00)</strong>
+                </div>
+                <div class="pass-item">
+                  <span class="pass-lbl">GUESTS</span>
+                  <strong class="pass-val" id="confirmGuests">2 Adults</strong>
+                </div>
+                <div class="pass-item">
+                  <span class="pass-lbl">TOTAL PAID</span>
+                  <strong class="pass-val gold-accent" id="confirmTotalPaid">$1,294.72</strong>
+                </div>
+              </div>
+
+              <div class="pass-footer">
+                <div class="pass-qr">
+                  <div class="qr-mock">
+                    <i data-lucide="qr-code"></i>
+                  </div>
+                  <span>Scan upon arrival for VIP Express Check-In</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="confirmation-actions">
+              <button class="btn btn-gold" id="printPassBtn">
+                <i data-lucide="printer"></i>
+                <span>PRINT / SAVE VOUCHER</span>
+              </button>
+              <button class="btn btn-outline" id="finishBookingBtn">
+                <span>RETURN TO EXPLORING</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. ROOM QUICK VIEW & 360 TOUR MODAL -->
+  <div class="modal-overlay" id="quickViewModal" aria-hidden="true">
+    <div class="modal-dialog modal-quickview-dialog">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="quickview-layout">
+        <div class="quickview-gallery">
+          <div class="gallery-main-img-wrap">
+            <img src="assets/images/room-premier.jpg" alt="Room preview" id="qvMainImg" class="qv-main-img">
+            <span class="qv-badge" id="qvBadge">VIP SUITE</span>
+          </div>
+          <div class="gallery-thumbs" id="qvThumbs">
+            <!-- Thumbnails injected dynamically -->
+          </div>
+        </div>
+
+        <div class="quickview-info">
+          <div class="qv-header">
+            <span class="qv-eyebrow" id="qvCategory">PREMIER CATEGORY</span>
+            <h3 class="qv-title" id="qvTitle">Premier Oceanfront Room</h3>
+            <div class="qv-price-tag">
+              <span class="qv-price-val" id="qvPrice">$449</span>
+              <span class="qv-price-period">/ night</span>
+            </div>
+          </div>
+
+          <p class="qv-description" id="qvDescription">
+            Direct panoramic ocean views with private oversized glass terrace, outdoor daybed lounge, champagne welcome bar, and deep marble bathroom.
+          </p>
+
+          <div class="qv-specs-grid" id="qvSpecsGrid">
+            <!-- Injected dynamically -->
+          </div>
+
+          <div class="qv-amenities-list">
+            <h4>INCLUDED PRIVILEGES</h4>
+            <div class="qv-amenity-tags" id="qvAmenityTags">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+
+          <div class="qv-actions">
+            <button class="btn btn-gold btn-block" id="qvBookNowBtn">
+              <span>RESERVE THIS SANCTUARY</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. VIRTUAL TOUR VIDEO MODAL -->
+  <div class="modal-overlay" id="tourModal" aria-hidden="true">
+    <div class="modal-dialog modal-tour-dialog">
+      <button class="modal-close-btn" id="closeTourModalBtn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="tour-video-container">
+        <div class="tour-mock-screen">
+          <img src="assets/images/hero-lounge.jpg" alt="Virtual 360 Tour" class="tour-poster-img">
+          <div class="tour-control-overlay">
+            <div class="tour-play-pulse">
+              <i data-lucide="play"></i>
+            </div>
+            <h3>360° Panoramic Cinematic Tour</h3>
+            <p>Seaside Hotel — Penthouse Suites & Private Coastline</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. FLOATING LUXURY CONCIERGE CHAT WIDGET -->
+  <div class="concierge-widget" id="conciergeWidget">
+    <button class="concierge-btn" id="conciergeToggleBtn" aria-label="Chat with Concierge Pierre">
+      <div class="concierge-avatar-wrap">
+        <i data-lucide="sparkles"></i>
+      </div>
+      <div class="concierge-btn-label">
+        <span class="concierge-name">Concierge Pierre</span>
+        <span class="concierge-status"><span class="status-dot"></span> Online</span>
+      </div>
+    </button>
+
+    <div class="concierge-chat-window" id="conciergeChatWindow" aria-hidden="true">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar"><i data-lucide="crown"></i></div>
+          <div>
+            <h4>Pierre de Montmirail</h4>
+            <span>Chief Concierge • Seaside Hotel</span>
+          </div>
+        </div>
+        <button class="chat-close" id="closeChatBtn"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg msg-concierge">
+          <p>Bonjour! Welcome to Seaside Hotel. I am at your service. How may I assist your luxury stay today?</p>
+          <span class="msg-time">Just now</span>
+        </div>
+      </div>
+
+      <div class="chat-quick-replies" id="chatQuickReplies">
+        <button class="quick-reply-pill" data-msg="Recommend the best suite for couples">💑 Best suite for couples?</button>
+        <button class="quick-reply-pill" data-msg="What are the dining hours & reservations?">🍽️ Dining reservations</button>
+        <button class="quick-reply-pill" data-msg="How do I book airport transfer?">🚗 Airport Chauffeur</button>
+        <button class="quick-reply-pill" data-msg="Tell me about the Thermal Spa">✨ Spa rituals</button>
+      </div>
+
+      <form class="chat-input-bar" id="chatForm">
+        <input type="text" id="chatInput" placeholder="Ask Pierre anything..." autocomplete="off">
+        <button type="submit" class="btn-chat-send" aria-label="Send message"><i data-lucide="send"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Main Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

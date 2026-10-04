@@ -1,0 +1,26 @@
+{
+  "name": "hotel-booking-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Souvik-Das-23/hotel-booking-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Souvik-Das-23/hotel-booking-1/issues"
+  },
+  "homepage": "https://github.com/Souvik-Das-23/hotel-booking-1#readme",
+  "devDependencies": {
+    "vite": "^8.3.2"
+  }
+}
